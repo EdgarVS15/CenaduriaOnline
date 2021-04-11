@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Texto extends StatefulWidget {
-  Texto({Key key, this.texto}) : super(key: key);
   final String texto;
+  final double size;
+
+  const Texto({Key key, this.texto, @required this.size}) : super(key: key);
+
+  
   @override
   _TextoState createState() => _TextoState();
 }
@@ -13,8 +17,8 @@ class _TextoState extends State<Texto> {
     return Container(
       margin: EdgeInsets.only(left: 10),
       child: Text(
-        widget.texto,
-        style: TextStyle(fontSize: 27,color: Colors.white,fontStyle: FontStyle.italic),
+         widget.texto,
+        style: TextStyle(fontSize: widget.size,color: Colors.white,fontStyle: FontStyle.italic),
         ),
     );
   }

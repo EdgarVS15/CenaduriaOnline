@@ -1,4 +1,5 @@
 
+import 'package:cenaduria_online/responsive/responsive.dart';
 import 'package:flutter/material.dart';
 
 class Botones extends StatefulWidget {
@@ -25,6 +26,7 @@ class _BotonesState extends State<Botones> {
 
   @override
   Widget build(BuildContext context) {
+    final responsive = Responsive(context);
     return Container(
       height: widget.heigth,
       width: widget.width,
@@ -34,7 +36,12 @@ class _BotonesState extends State<Botones> {
           borderRadius: BorderRadius.circular(5)
         ),
           onPressed: (){},
-          child: Text(widget.texto,style: TextStyle(color: widget.colorTexto,fontSize: 11),),
+          child: Text(
+            widget.texto,
+            style: TextStyle(
+              color: widget.colorTexto,
+              fontSize: responsive.ip(1.7),
+              fontWeight: FontWeight.bold),),
           color: widget.colorBoton,
        ),
     );
