@@ -75,12 +75,11 @@ class _HomeState extends State<Home> {
   }
 
   Widget _body() {
-    var size = MediaQuery.of(context).size;
     final responsive = Responsive(context);
     return Container(
         margin: EdgeInsets.only(top: 4),
-        width: size.width,
-        height: responsive.hp(76.6),
+        width: responsive.width,
+        //height: responsive.heigth,
         decoration: BoxDecoration(
            borderRadius: BorderRadius.circular(20),
           color: Color.fromRGBO(46, 53, 67, 1),
@@ -125,6 +124,7 @@ class _HomeState extends State<Home> {
                           child: Column(
                             children: [
                               Container(
+                                height: responsive.hp(49.5),
                                  margin: EdgeInsets.only(left: 15,right: 15),
                                    child: Image.asset("assets/img1.png")),
                               Container(

@@ -40,7 +40,7 @@ class _BotonesState extends State<Botones> {
             widget.texto,
             style: TextStyle(
               color: widget.colorTexto,
-              fontSize: responsive.ip(1.7),
+              fontSize: responsive.ip(1.6),
               fontWeight: FontWeight.bold),),
           color: widget.colorBoton,
        ),
